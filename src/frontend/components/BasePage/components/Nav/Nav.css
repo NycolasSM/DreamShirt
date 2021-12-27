@@ -1,0 +1,33 @@
+.navigation{
+  width: 100vw;
+}
+
+.navigationTabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0px 10%;
+  height: 40px;
+  margin: 0;
+  gap: 2px;
+  list-style: none;
+  border: solid 1px #111;
+}
+
+.navigationTabs li, a{
+  border-left: 1px solid #111;
+  border-right: 1px solid #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: all ease 0.2s;
+  text-decoration: none;
+  color: #111;
+}
+
+.navigationTabs li:hover, a:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}

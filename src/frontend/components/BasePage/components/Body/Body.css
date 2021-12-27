@@ -1,0 +1,15 @@
+.AdvertingBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AdvertingBanner img{
+  width: 100vw;
+  opacity: 0.9;
+  filter: brightness(0.8);
+}
+
+.AdvertingBanner span{
+  position: absolute;
+}
