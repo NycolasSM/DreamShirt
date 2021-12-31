@@ -14,7 +14,7 @@
   border: solid 1px #111;
 }
 
-.navigationTabs li, a{
+.navigationTabs li, .navigationTabs a{
   border-left: 1px solid #111;
   border-right: 1px solid #111;
   display: flex;
@@ -27,7 +27,12 @@
   color: #111;
 }
 
-.navigationTabs li:hover, a:hover {
+.navigationTabs li:hover {
+  background-color: #ddd;
+  cursor: no-drop;
+}
+
+.navigationTabs a:hover {
   background-color: #ddd;
   cursor: pointer;
 }

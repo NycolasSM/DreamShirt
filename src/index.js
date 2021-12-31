@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
 
-import BasePage from './frontend/components/BasePage/BasePage.jsx'
+import Router from './frontend/components/Router.js'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BasePage />
+    <Router />
   </React.StrictMode>,
   document.getElementById('root')
 );

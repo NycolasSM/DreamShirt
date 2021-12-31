@@ -3,7 +3,7 @@ import './Header.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { faSearch, faUser, faList, faHeart, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faUser, faHeart, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
   return (
@@ -22,9 +22,9 @@ const Header = () => {
       </div>
       <section className='headerMenu'>
         <div className='headerMenuContainer'>
-          <div className='headerMenuLogo'>
+          <a href="/" className='headerMenuLogo'>
             DreamClothes
-          </div>
+          </a>
           <div className='headerMenuSearchContainer'>
             <input className='headerMenuSearch' placeholder='O que você procura hoje?' type="text" />
             <FontAwesomeIcon className="headerMenuSearchIcon" icon={faSearch} />

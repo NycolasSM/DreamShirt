@@ -26,7 +26,7 @@ header {
 }
 
 .headerMenuContainer {
-  max-width: 1400px;
+  max-width: 1300px;
   gap: 30px;
   display: flex;
   overflow: hidden;
@@ -48,6 +48,12 @@ header {
   font-size: 20px;
   padding: 6px;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.headerMenuLogo:hover {
+  background-color: transparent;
 }
 
 .headerMenuSearchContainer {
@@ -83,7 +89,7 @@ header {
 .headerUserInfo li{
   display: flex;
   align-items: center;
-  cursor: pointer;
+  cursor: no-drop;
 }
 
 .headerMenuIcons {

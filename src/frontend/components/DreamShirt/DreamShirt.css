@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Light.ttf') format('truetype');
+}
+
+:root {
+  --diameter: 200px;
+  --circular-line-width: 4px;
+  --background: white;
+  --line-color: #ff0055;
+}
+
+.DreamShirt {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: all-loadings-done 1.6s ease 3.8s forwards;
+  opacity: 0;
+  font-family: 'Roboto';
+}
+
+.shirtIconsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shirtIcons {
+  height: 200px;
+  margin: 60px 50px;
+  transition: all ease 0.2s;
+}
+
+.shirtIcons:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.shirtIcons.chosen {
+  transition: all ease 1.4s;
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+.shirtIcons.notChosen {
+  transition: all ease 1s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.LoadingDreamShirt {
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  animation: loading-start 1s ease forwards;
+  position: absolute;
+}
+
+.LoadingDreamShirtCircleAnimation {
+  position: absolute;
+  height: var(--diameter);
+  width: var(--diameter);
+  overflow: hidden;
+  animation: loading-done-circle 1s ease 2.8s forwards;
+}
+
+.buttomReturnToSelectTypeOfShirt {
+  position: absolute;
+  left: 10%;
+  margin-top: 50px;
+  background-color: transparent;
+  padding: 5px;
+  border: solid 1px black;
+  border-radius: 15px;
+}
+
+.shirtToEdit {
+  height: 400px;
+  padding: 10px;
+  margin-top: 4vh;
+  margin-right: 44vw;
+  border: black solid 2px;
+  border-radius: 6px;
+}
+
+.circle {
+  position: relative;
+}
+
+.outer-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--diameter);
+  width: var(--diameter);
+  border-radius: 50%;
+  background: var(--line-color);
+}
+
+.inner-circle {
+  position: absolute;
+  top: var(--circular-line-width);
+  left: var(--circular-line-width);
+  height: calc(var(--diameter) - 2 * var(--circular-line-width));
+  width:  calc(var(--diameter) - 2 * var(--circular-line-width));
+  background-color: var(--background);
+  border-radius: 50%;
+}
+
+.box {
+  position: absolute;
+  height: calc(var(--diameter)/2);
+  width: calc(var(--diameter)/2);
+  background: var(--background);
+}
+
+.box-top-left {
+  left: 0;
+  top: 0;
+  transform-origin: 100% 100%;
+  animation: show-first-third 0.6s linear 0.3s forwards;
+}
+
+.box-top-right {
+  top: 0;
+  left: calc(var(--diameter)/2);
+  transform-origin: 0 100%;
+  animation: show-second-fourth 0.6s linear 2.1s forwards;
+}
+
+.box-bottom-left {
+  left: 0;
+  top: calc(var(--diameter)/2);
+  transform-origin: 100% 0;
+  animation: show-second-fourth 0.6s linear 0.9s forwards;
+}
+
+.box-bottom-right {
+  left: calc(var(--diameter)/2);
+  top: calc(var(--diameter)/2);
+  transform-origin: 0 0;
+  animation: show-first-third 0.6s linear 1.5s forwards;
+}
+
+@keyframes show-first-third {
+  0% {
+    transform: skewX(0deg);
+  }
+  99.9% {
+    height: calc(var(--diameter)/2);
+    width: calc(var(--diameter)/2);
+  }
+  100% {
+    height: 0;
+    width: 0;
+    transform: skewX(90deg);
+  }
+}
+
+@keyframes show-second-fourth {
+  0% {
+    transform: skewY(0deg);
+  }
+  99.9% {
+    height: calc(var(--diameter)/2);
+    width: calc(var(--diameter)/2);
+  }
+  100% {
+    height: 0;
+    width: 0;
+    transform: skewY(-90deg);
+  }
+}
+
+@keyframes loading-start {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes loading-done-circle {
+  0% {
+    opacity: 100;
+  }
+  10% {
+    transform: scale(1.05);
+  }
+  30% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes loading-done-logo {
+  0% {
+    transform: translateY(-4px);
+    opacity: 100;
+  }
+  30% {
+    transform: scale(1.05);
+  }
+  60% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+.LoadingDreamShirtLogo {
+  height: 200px;
+  transform: translateY(-4px);
+  z-index: 100;
+  animation: loading-done-logo 1s ease 2.68s forwards;
+}
+
+@keyframes all-loadings-done {
+  0% {
+    opacity: 0;
+    transform: scale(1.2)
+  }
+  100% {
+    opacity: 100;
+    transform: scale(1)
+  }
+}
