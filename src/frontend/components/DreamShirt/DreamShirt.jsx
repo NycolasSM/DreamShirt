@@ -82,7 +82,6 @@ const DreamShirt = () => {
     Voltar para Tipos
   </button>
 
-
   // TODO estratégia usada acredito ter sido errado, melhor utilizar rotas como o router, assim além de salvar a navegação sera melhor para as animações
   // e transferencia de propriedades, ou seja refatorar boa parte do código para introduzir as rotas ou componentes que se comunicam por props
 

@@ -3,7 +3,9 @@ import './Header.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { faSearch, faUser, faHeart, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faUser, faHeart, faShoppingBag, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+
+import Nav from '../Nav/Nav'
 
 const Header = () => {
   return (
@@ -25,21 +27,19 @@ const Header = () => {
           <a href="/" className='headerMenuLogo'>
             DreamClothes
           </a>
-          <div className='headerMenuSearchContainer'>
-            <input className='headerMenuSearch' placeholder='O que você procura hoje?' type="text" />
-            <FontAwesomeIcon className="headerMenuSearchIcon" icon={faSearch} />
-          </div>
+          <Nav />
           <ul className='headerUserInfo'>
             <li>
+              <FontAwesomeIcon className="headerMenuIcons" icon={faSearch} />
+            </li>
+            <li>
               <FontAwesomeIcon className="headerMenuIcons" icon={faHeart} />
-              <span>Lista de Desejos</span>
             </li>
             <li>
-            <FontAwesomeIcon className="headerMenuIcons" icon={faUser} />
-              <span>Entrar</span>
+              <FontAwesomeIcon className="headerMenuIcons" icon={faUser} />
             </li>
             <li>
-            <FontAwesomeIcon className="headerMenuIcons" icon={faShoppingBag} />
+              <FontAwesomeIcon className="headerMenuIcons" icon={faShoppingBag} />
             </li>
           </ul>
         </div>

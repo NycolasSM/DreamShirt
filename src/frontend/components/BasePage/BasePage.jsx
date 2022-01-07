@@ -8,7 +8,6 @@ const BasePage = () => {
   return (
     <>
       <Header />
-      <Nav />
       <Body />
     </>
   )

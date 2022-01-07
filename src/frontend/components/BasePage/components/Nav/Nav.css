@@ -6,33 +6,38 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 0px 10%;
-  height: 40px;
-  margin: 0;
-  gap: 2px;
+  margin: 0px 20px;
   list-style: none;
-  border: solid 1px #111;
 }
 
 .navigationTabs li, .navigationTabs a{
-  border-left: 1px solid #111;
-  border-right: 1px solid #111;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  height: 30px;
+  padding: 0px 10px;
   transition: all ease 0.2s;
   text-decoration: none;
   color: #111;
 }
 
-.navigationTabs li:hover {
-  background-color: #ddd;
+.navHeaderIcon {
   cursor: no-drop;
 }
 
+.navigationTabs div {
+  margin-right: 10px;
+  cursor: no-drop;
+}
+
+.dreamShirtNavIcon:hover {
+  cursor: pointer;
+}
+
+.navigationTabs a{
+  color: rgb(238, 107, 0);
+}
+
 .navigationTabs a:hover {
-  background-color: #ddd;
   cursor: pointer;
 }
